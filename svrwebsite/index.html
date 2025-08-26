@@ -53,6 +53,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
         }
 
         .logo {
@@ -834,29 +835,38 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .header-content {
-                flex-direction: column;
-                text-align: center;
+               flex-direction: row;
+                text-align: left;
             }
 
             .logo {
-                margin-bottom: 15px;
+                margin-bottom: 0;
             }
 
             nav ul {
-                margin-top: 15px;
+               display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--primary);
                 flex-direction: column;
                 align-items: center;
+                padding: 20px 0;
+                margin-top: 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+ 	nav ul.show {
+                display: flex;
             }
 
             nav ul li {
-                margin: 10px 0;
+                margin: 15px 0;
             }
 
-            .mobile-menu-btn {
+              .mobile-menu-btn {
                 display: block;
-                position: absolute;
-                top: 20px;
-                right: 20px;
+                position: static;
             }
 
             .hero h2 {
@@ -916,7 +926,7 @@
                 <div class="logo">
                     <div class="logo-img">
                         <!-- Added logo image -->
-                        <img src="svrwebsite/images/svrlogo.jpg" alt="SVR Computer Education Logo">
+                        <img src="svrwebsite/images/logo.jpg" alt="SVR Computer Education Logo">
                     </div>
                     <div>
                         <div class="iso-badge">ISO 9001:2015 CERTIFIED</div>
@@ -1006,7 +1016,9 @@
                     </div>
                 </div>
                 <div class="course-card">
-                    <div class="course-img" style="background-image: url('https://images.unsplash.com/photo-1526379879527-8559ecfcaec0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+                    <div class="course-img" style="background-image: url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+
+
                     <div class="course-content">
                         <h3>Java Programming</h3>
                         <p>Learn Java programming language for building cross-platform applications and web services.</p>
@@ -1062,7 +1074,7 @@
                 </div>
                 <!-- New Courses Added -->
                 <div class="course-card">
-                    <div class="course-img" style="background-image: url('https://images.unsplash.com/photo-1543946207-39bf91ebe0ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+                   <div class="course-img" style="background-image: url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
                     <div class="course-content">
                         <h3>Databases (SQL/Oracle/MySQL)</h3>
                         <p>Learn database design, implementation, and management with popular database systems.</p>
@@ -1141,12 +1153,12 @@
     <section class="testimonials" id="testimonials">
         <div class="container">
             <div class="section-title">
-                <h2>Student Testimonials</h2>
+                <h2>What Students Say's About us</h2>
             </div>
             <div class="testimonial-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-text">
-                        <p>"I completed the PGDCA course at SVR and it completely transformed my career. The instructors were very supportive and the hands-on training helped me secure a job as a computer operator."</p>
+                        <p>"I completed the PGDCA course at SVR and it completely transformed my career. The instructors were very supportive and the hands-on training 		helped me secure a job ."</p>
                     </div>
                     <div class="testimonial-author">
                         <div class="author-img">
@@ -1160,7 +1172,7 @@
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-text">
-                        <p>"The Java Programming course at SVR gave me the skills I needed to become a software developer. The course content was up-to-date and the projects were challenging and relevant."</p>
+                        <p>"The Java Programming course at SVR gave me the skills I needed to become a software developer. The course content was up-to-date and the projects 		were challenging and relevant."</p>
                     </div>
                     <div class="testimonial-author">
                         <div class="author-img">
@@ -1172,16 +1184,80 @@
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
+
+
+
+
+<div class="testimonial-card">
                     <div class="testimonial-text">
-                        <p>"I enrolled in the Tally + GST course and it was exactly what I needed for my business. Now I can manage all my accounts and GST filing myself. Thank you SVR for the practical training!"</p>
+                        <p>"The PGDCA course gave me complete computer application knowledge, building a strong foundation for my future."</p>
                     </div>
                     <div class="testimonial-author">
                         <div class="author-img">
-                            <img src="svrwebsite/images/ahmed.png" alt="Ahmed">
+                            <img src="svrwebsite/images/ajuba.png" alt="Sai">
                         </div>
                         <div class="author-info">
-                            <h4>Ahmed</h4>
+                            <h4>Ajuba </h4>
+                            <p>PGDCA  Student</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+<div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>"SVR Computers’ DCA course helped me gain essential computer skills that I now use every day with confidence."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="svrwebsite/images/nandini.png" alt="Sai">
+                        </div>
+                        <div class="author-info">
+                            <h4>Nandini </h4>
+                            <p>DCA Student</p>
+                        </div>
+                    </div>
+                </div>
+<div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>"SVR Computers made Python easy with practical examples and projects. Now I can apply it in real-world tasks confidently."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="svrwebsite/images/anudeep.jpeg" alt="Sai">
+                        </div>
+                        <div class="author-info">
+                            <h4>Anudeep </h4>
+                            <p>Python Student</p>
+                        </div>
+                    </div>
+                </div>
+
+<div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>"I joined the C Programming course at SVR Computer Education with very little knowledge of programming. The way concepts were explained step by step, with real-time examples and practical exercises, made learning so easy and enjoyable. I especially liked the focus on writing clean code and solving problems logically.."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="svrwebsite/images/bharghavi.png" alt="Sai">
+                        </div>
+                        <div class="author-info">
+                            <h4>Bharghavi </h4>
+                            <p>C Programming Student</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>"I enrolled in the Tally + GST course and it was exactly what I needed for my business. Now I can manage all my accounts and GST filing myself. 		Thank you SVR for the practical training!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="svrwebsite/images/sl.png" alt="Sri Latha">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sri Latha</h4>
                             <p>Tally + GST Student</p>
                         </div>
                     </div>
@@ -1227,13 +1303,13 @@
                     <div class="video-wrapper">
                         <!-- Added actual video element -->
                         <video controls poster="https://images.unsplash.com/photo-1542744094-3a31f272c490?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80">
-                            <source src="svrwebsite/images/video1.mp4" type="video/mp4">
+                            <source src="svrwebsite/images/video3.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
                     <div class="video-content">
-                        <h3>Database Management</h3>
-                        <p>Learn how to design and manage databases effectively.</p>
+                        <h3>C-Programming</h3>
+                        <p>C Programming was taught so simply and practically write programs with full confidence.</p>
                     </div>
                 </div>
             </div>
@@ -1295,6 +1371,24 @@
                     <div class="activity-overlay">
                         <h3>Project Work</h3>
                         <p>Real-world application of learned concepts</p>
+                    </div>
+                </div>
+
+
+<div class="activity-card">
+                    <img src="svrwebsite/images/13.jpeg" alt="Project Work" class="activity-img">
+                    <div class="activity-overlay">
+                        <h3>On Job Training </h3>
+                        <p>We are proud to conduct internships that bridge the gap between academic knowledge and professional skills.</p>
+                    </div>
+                </div>
+
+
+<div class="activity-card">
+                    <img src="svrwebsite/images/12.jpeg" alt="Project Work" class="activity-img">
+                    <div class="activity-overlay">
+                        <h3>On Job Training </h3>
+                        <p>Through our internship programs, students gain hands-on experience and practical knowledge beyond classroom learning.</p>
                     </div>
                 </div>
 	<div class="activity-card">
