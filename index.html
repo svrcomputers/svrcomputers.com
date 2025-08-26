@@ -53,6 +53,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
         }
 
         .logo {
@@ -834,29 +835,38 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .header-content {
-                flex-direction: column;
-                text-align: center;
+               flex-direction: row;
+                text-align: left;
             }
 
             .logo {
-                margin-bottom: 15px;
+                margin-bottom: 0;
             }
 
             nav ul {
-                margin-top: 15px;
+               display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--primary);
                 flex-direction: column;
                 align-items: center;
+                padding: 20px 0;
+                margin-top: 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+ 	nav ul.show {
+                display: flex;
             }
 
             nav ul li {
-                margin: 10px 0;
+                margin: 15px 0;
             }
 
-            .mobile-menu-btn {
+              .mobile-menu-btn {
                 display: block;
-                position: absolute;
-                top: 20px;
-                right: 20px;
+                position: static;
             }
 
             .hero h2 {
